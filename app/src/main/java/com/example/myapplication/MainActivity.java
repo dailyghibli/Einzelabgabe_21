@@ -17,12 +17,17 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String SERVER_DOMAIN = "se2-isys.aau.at";
     private static final int SERVER_PORT = 53212;
+    private static final String MATRIKEL = "01461562";
 
     private PrintWriter mOutputBuffer;
     private BufferedReader mInputBuffer;
@@ -92,4 +97,27 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
     }
-}
+
+
+    public void calculate(View view) {
+        Editable matrikel = mInputMatrikel.getText();
+            if(matrikel.toString().equals(MATRIKEL)) {
+
+                List<Integer> numbers = new ArrayList<Integer>();
+
+                for(int i = 0; i<MATRIKEL.length(); i++){
+                    int current = Integer.parseInt(String.valueOf(MATRIKEL.charAt(i)));
+                    if(!(current == 2 || current == 3 || current == 5 || current == 7)){
+                        numbers.add(current);
+                    }
+                }
+                Collections.sort(numbers);
+                String sortedString = "";
+                for(int current : numbers){
+                    sortedString += current;
+                }
+                mServerAnswer.setText(sortedString);
+            }
+
+        }
+    }

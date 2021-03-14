@@ -18,7 +18,7 @@
             android:id="@+id/Greet"
             android:layout_width="199dp"
             android:layout_height="88dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:layout_gravity="center_horizontal"
             android:text="Gib deine Matrikelnummer ein!"
             tools:layout_editor_absoluteX="131dp"
@@ -51,6 +51,17 @@
             android:layout_height="wrap_content"
             android:onClick="sendNumber"
             android:text="Abschicken"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="510dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calculate"
+            android:text="Berechnen"
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
             tools:layout_editor_absoluteX="178dp"
