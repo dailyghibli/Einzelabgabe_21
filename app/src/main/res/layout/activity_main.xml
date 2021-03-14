@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="75dp">
+
+
+        <TextView
+            android:id="@+id/Greet"
+            android:layout_width="199dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Gib deine Matrikelnummer ein!"
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="185dp" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="355dp" />
+
+        <TextView
+            android:id="@+id/Result"
+            android:layout_width="176dp"
+            android:layout_height="72dp"
+            android:hint="Antwort vom Server"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="424dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendNumber"
+            android:text="Abschicken"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="510dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
